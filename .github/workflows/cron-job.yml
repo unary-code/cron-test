@@ -2,7 +2,7 @@ name: Scheduled Web Scraper
 
 on:
   schedule:
-    - cron: '* * * * *' # Every day at 6am UTC
+    - cron: '41 0 * * *' # Every day at 6am UTC
 
 jobs:
   scrape:
