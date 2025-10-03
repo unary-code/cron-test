@@ -1,6 +1,7 @@
 import asyncio
 from playwright.async_api import async_playwright
 from datetime import datetime, timedelta
+import pytz
 import smtplib
 from email.message import EmailMessage
 import json
@@ -13,7 +14,9 @@ senderEmail = os.environ.get("EMAIL")
 gatewayAddress = senderEmail
 appKey = os.environ.get("WORD")
 
-curTime = datetime.now()
+dallas_tz = pytz.timezone("America/Chicago")
+
+curTime = datetime.now(dallas_tz)
 print("RUN OF test.py at time=", curTime)
 
 STATE_FILE = "./scraped_jobs.json"
@@ -63,9 +66,9 @@ async def main():
 
         numRowsChecked = 0
 
-        currentTime = datetime.now()
-        currentDay = datetime.today()
-        print("CURRENT DAY=", currentDay)
+        currentTime = datetime.now(dallas_tz)
+        currentDay = datetime.today(dallas_tz)
+        # print("CURRENT DAY=", currentDay)
 
         jobs_to_add = []
         
@@ -154,7 +157,7 @@ async def main():
             
             msg = EmailMessage()
     
-            emailTime = datetime.now()
+            emailTime = datetime.now(dallas_tz)
             
             msg['From'] = senderEmail
             msg['To'] = gatewayAddress
