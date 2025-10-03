@@ -27,10 +27,12 @@ if os.path.exists(STATE_FILE):
     except Exception as e:
         past_jobs = []
 
+initial_num_past_jobs = len(past_jobs)
+
 last_past_job = None
 if len(past_jobs) > 0:
-    # Get the most recent job, out of all the jobs that had already been collected on previous runs of test.py .
-    last_past_job = past_jobs[-1]
+    # Get the most recently-posted job, out of all the jobs that had already been collected on previous runs of test.py .
+    last_past_job = past_jobs[0]
 
 jobs_to_add = []
 
@@ -132,12 +134,20 @@ async def main():
 
        
         await browser.close()
-
-        jobs_to_add = jobs_to_add + past_jobs
-        if len(jobs_to_add) > MAX_ALLOWED_JOBS_IN_FILE:
-            jobs_to_add = jobs_to_add[0:MAX_ALLOWED_JOBS_IN_FILE]
-        with open(STATE_FILE, "w") as f:
-            json.dump(list(jobs_to_add), f, indent=2)
+        if len(jobs_to_add) == 0:
+            # Do NOT need to over-write the .json file
+            # If the .json file initially had more jobs than allowed, then I need to write to the .json file
+            if initial_num_past_jobs > MAX_ALLOWED_JOBS_IN_FILE:
+                # Note that we already truncated "past_jobs"
+                with open(STATE_FILE, "w") as f:
+                    json.dump(past_jobs, f, indent=2)
+            pass
+        else:
+            jobs_to_add = jobs_to_add + past_jobs
+            if len(jobs_to_add) > MAX_ALLOWED_JOBS_IN_FILE:
+                jobs_to_add = jobs_to_add[0:MAX_ALLOWED_JOBS_IN_FILE]
+            with open(STATE_FILE, "w") as f:
+                json.dump(jobs_to_add, f, indent=2)
 
 # await main()
 if __name__ == "__main__":
