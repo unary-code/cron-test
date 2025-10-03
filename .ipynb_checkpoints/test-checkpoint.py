@@ -135,25 +135,9 @@ async def main():
             
             numRowsChecked += 1
             # END OF THIS ITER OF THE FOR LOOP; MOVE ON TO THE NEXT ROW.
-        
-
-       
         await browser.close()
-        if len(jobs_to_add) == 0:
-            # Do NOT need to over-write the .json file
-            # If the .json file initially had more jobs than allowed, then I need to write to the .json file
-            if initial_num_past_jobs > MAX_ALLOWED_JOBS_IN_FILE:
-                # Note that we already truncated "past_jobs"
-                with open(STATE_FILE, "w") as f:
-                    json.dump(past_jobs, f, indent=2)
-            pass
-        else:
-            jobs_to_add = jobs_to_add + past_jobs
-            if len(jobs_to_add) > MAX_ALLOWED_JOBS_IN_FILE:
-                jobs_to_add = jobs_to_add[0:MAX_ALLOWED_JOBS_IN_FILE]
-            with open(STATE_FILE, "w") as f:
-                json.dump(jobs_to_add, f, indent=2)
 
+        # SECTION: Send 1 email per run of test.py.
         num_jobs_to_add = len(jobs_to_add)
         msg_content = "Below is the NUM=[ " + str(num_jobs_to_add) + " ] jobs on the Github Job Board, in order from MOST RECENTLY POSTED (TOP OF THE EMAIL) on the Github Job Board TO LEAST RECENTLY POSTED (BOTTOM OF THE EMAIL).\nDAY POSTED refers to day posted on the Github Board in Dallas time, estimated by me.\n"
         for i in range(num_jobs_to_add):
@@ -165,7 +149,6 @@ async def main():
                 cur_job_day_posted = datetime.strptime(jobs_to_add[i]["day_posted"], "%m-%d-%Y").strftime("%b %d, %Y")
             msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["links"]["url"] if jobs_to_add[i]["links"]["url"] else "") + (("\n\tSIMPLIFY:"+jobs_to_add[i]["links"]["simplify_url"]) if jobs_to_add[i]["links"]["simplify_url"] else "") + "\nDAY POSTED:" + (cur_job_day_posted if cur_job_day_posted else "Date not found"))
         
-        # NEXT SECTION: Just send a email, do NOT try to send a message. Called one time per run of test.py.
         msg = EmailMessage()
 
         emailTime = datetime.now()
@@ -181,6 +164,23 @@ async def main():
             smtp.send_message(msg)
         
         print("Email sent successfully!")
+
+        # SECTION: OVERWRITE THE .json FILE IF WE FOUND NEW JOBS ON THIS RUN OF TEST.PY
+        if len(jobs_to_add) == 0:
+            # Do NOT need to over-write the .json file
+            # If the .json file initially had more jobs than allowed, then I need to write to the .json file
+            if initial_num_past_jobs > MAX_ALLOWED_JOBS_IN_FILE:
+                # Note that we already truncated "past_jobs"
+                with open(STATE_FILE, "w") as f:
+                    json.dump(past_jobs, f, indent=2)
+            pass
+        else:
+            jobs_to_add = jobs_to_add + past_jobs
+            if len(jobs_to_add) > MAX_ALLOWED_JOBS_IN_FILE:
+                jobs_to_add = jobs_to_add[0:MAX_ALLOWED_JOBS_IN_FILE]
+            with open(STATE_FILE, "w") as f:
+                json.dump(jobs_to_add, f, indent=2)
+
 
 # await main()
 if __name__ == "__main__":
