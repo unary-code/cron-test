@@ -67,7 +67,7 @@ async def main():
         numRowsChecked = 0
 
         currentTime = datetime.now(dallas_tz)
-        currentDay = datetime.today(dallas_tz)
+        currentDay = datetime.today()
         # print("CURRENT DAY=", currentDay)
 
         jobs_to_add = []
