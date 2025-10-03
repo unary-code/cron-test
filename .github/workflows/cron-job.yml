@@ -21,6 +21,8 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Install browsers
+	run: playwright install chromium --with-deps
       - name: Run scraper
         run: python test.py
 
