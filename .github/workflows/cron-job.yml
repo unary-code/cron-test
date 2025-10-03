@@ -2,7 +2,7 @@ name: Scheduled Web Scraper
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Every day at 6am UTC
+    - cron: '1,31 7-23 * * *' # Twice per hour
   workflow_dispatch:
     inputs:
       test_mode:
