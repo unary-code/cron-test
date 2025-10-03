@@ -163,7 +163,7 @@ async def main():
             cur_job_day_posted = None
             if isinstance(jobs_to_add[i]["day_posted"], str) and len(jobs_to_add[i]["day_posted"])>0:
                 cur_job_day_posted = datetime.strptime(jobs_to_add[i]["day_posted"], "%m-%d-%Y").strftime("%b %d, %Y")
-            msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["links"]["url"] if jobs_to_add[i]["links"]["url"] else "") + (("\n\tSIMPLIFY:"+jobs_to_add[i]["links"]["simplify"]) if jobs_to_add[i]["links"]["simplify"] else "") + "\nDAY POSTED:" + (cur_job_day_posted if cur_job_day_posted else "Date not found"))
+            msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["links"]["url"] if jobs_to_add[i]["links"]["url"] else "") + (("\n\tSIMPLIFY:"+jobs_to_add[i]["links"]["simplify_url"]) if jobs_to_add[i]["links"]["simplify_url"] else "") + "\nDAY POSTED:" + (cur_job_day_posted if cur_job_day_posted else "Date not found"))
         
         # NEXT SECTION: Just send a email, do NOT try to send a message. Called one time per run of test.py.
         msg = EmailMessage()
