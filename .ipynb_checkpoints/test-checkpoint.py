@@ -12,6 +12,9 @@ STATE_FILE = "./scraped_jobs.json"
 URL = "https://github.com/SimplifyJobs/New-Grad-Positions/tree/dev"
 print(URL)
 
+# If we find that there are more than this number of jobs in the JSON file, then we remove the oldest jobs from the JSON file.
+MAX_ALLOWED_JOBS_IN_FILE = 1000
+
 # Check the MAX_ROWS_TO_CHECK top (most recent) rows from the website
 MAX_ROWS_TO_CHECK = 10
 
@@ -24,13 +27,15 @@ if os.path.exists(STATE_FILE):
     except Exception as e:
         past_jobs = []
 
-# 
 last_past_job = None
 if len(past_jobs) > 0:
     # Get the most recent job, out of all the jobs that had already been collected on previous runs of test.py .
     last_past_job = past_jobs[-1]
 
 jobs_to_add = []
+
+if len(past_jobs) > MAX_ALLOWED_JOBS_IN_FILE:
+    past_jobs = past_jobs[len(past_jobs)-MAX_ALLOWED_JOBS_IN_FILE:]
 
 async def main():
     async with async_playwright() as p:
@@ -129,6 +134,8 @@ async def main():
         await browser.close()
 
         jobs_to_add = past_jobs + jobs_to_add
+        if len(jobs_to_add) > MAX_ALLOWED_JOBS_IN_FILE:
+            jobs_to_add = jobs_to_add[len(jobs_to_add)-MAX_ALLOWED_JOBS_IN_FILE:]
         with open(STATE_FILE, "w") as f:
             json.dump(list(jobs_to_add), f, indent=2)
 
