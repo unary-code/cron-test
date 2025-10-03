@@ -29,6 +29,10 @@ jobs:
       - name: Install browsers
         run: playwright install chromium --with-deps
       - name: Run scraper
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          WORD: ${{ secrets.WORD }}
+          EMAIL: ${{ secrets.EMAIL }}
         run: python test.py
       - name: Commit and push changes
         run: |

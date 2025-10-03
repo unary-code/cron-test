@@ -1,16 +1,22 @@
 import asyncio
 from playwright.async_api import async_playwright
 from datetime import datetime, timedelta
+import smtplib
+from email.message import EmailMessage
 import json
 import os
+
+# GET ALL THE ENVIRONMENTAL VARS.
+URL = os.environ.get("BASE_URL")
+
+senderEmail = os.environ.get("EMAIL")
+gatewayAddress = senderEmail
+appKey = os.environ.get("WORD")
 
 curTime = datetime.now()
 print("RUN OF test.py at time=", curTime)
 
 STATE_FILE = "./scraped_jobs.json"
-
-URL = "https://github.com/SimplifyJobs/New-Grad-Positions/tree/dev"
-print(URL)
 
 # If we find that there are more than this number of jobs in the JSON file, then we remove the oldest jobs from the JSON file.
 MAX_ALLOWED_JOBS_IN_FILE = 1000
@@ -44,11 +50,10 @@ async def main():
         browser = await p.chromium.launch()
         page = await browser.new_page()
         await page.goto(URL)
-        print(await page.title())
         
         await page.goto(URL, wait_until="networkidle")
         await page.wait_for_selector("markdown-accessiblity-table > table > tbody > tr")
-        # await page.wait_for_selector("li.job-list-item__job-info-item")
+        
         print("AFTER waiting for markdown-accessiblity-table > table > tbody > tr to appear / be loaded on the page")
 
         tableRows = page.locator("markdown-accessiblity-table > table > tbody > tr")
@@ -148,6 +153,34 @@ async def main():
                 jobs_to_add = jobs_to_add[0:MAX_ALLOWED_JOBS_IN_FILE]
             with open(STATE_FILE, "w") as f:
                 json.dump(jobs_to_add, f, indent=2)
+
+        num_jobs_to_add = len(jobs_to_add)
+        msg_content = "Below is the NUM=[ " + str(num_jobs_to_add) + " ] jobs on the Github Job Board, in order from MOST RECENTLY POSTED (TOP OF THE EMAIL) on the Github Job Board TO LEAST RECENTLY POSTED (BOTTOM OF THE EMAIL).\nDAY POSTED refers to day posted on the Github Board in Dallas time, estimated by me.\n"
+        for i in range(num_jobs_to_add):
+            if i != 0:
+                msg_content += "\n\n=========\n\n"
+
+            cur_job_day_posted = None
+            if isinstance(jobs_to_add[i]["day_posted"], str) and len(jobs_to_add[i]["day_posted"])>0:
+                cur_job_day_posted = datetime.strptime(jobs_to_add[i]["day_posted"], "%m-%d-%Y").strftime("%b %d, %Y")
+            msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["links"]["url"] if jobs_to_add[i]["links"]["url"] else "") + (("\n\tSIMPLIFY:"+jobs_to_add[i]["links"]["simplify"]) if jobs_to_add[i]["links"]["simplify"] else "") + "\nDAY POSTED:" + (cur_job_day_posted if cur_job_day_posted else "Date not found"))
+        
+        # NEXT SECTION: Just send a email, do NOT try to send a message. Called one time per run of test.py.
+        msg = EmailMessage()
+
+        emailTime = datetime.now()
+        
+        msg['From'] = senderEmail
+        msg['To'] = gatewayAddress
+        msg['Subject'] = 'Job Update | ' + emailTime.strftime("%b %-d, %Y : At %-I:%M %p")
+        
+        msg.set_content(msg_content)
+        
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login(senderEmail, appKey)
+            smtp.send_message(msg)
+        
+        print("Email sent successfully!")
 
 # await main()
 if __name__ == "__main__":
