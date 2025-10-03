@@ -138,32 +138,35 @@ async def main():
         await browser.close()
 
         # SECTION: Send 1 email per run of test.py.
+        
         num_jobs_to_add = len(jobs_to_add)
-        msg_content = "Below is the NUM=[ " + str(num_jobs_to_add) + " ] jobs on the Github Job Board, in order from MOST RECENTLY POSTED (TOP OF THE EMAIL) on the Github Job Board TO LEAST RECENTLY POSTED (BOTTOM OF THE EMAIL).\nDAY POSTED refers to day posted on the Github Board in Dallas time, estimated by me.\n"
-        for i in range(num_jobs_to_add):
-            if i != 0:
-                msg_content += "\n\n=========\n\n"
-
-            cur_job_day_posted = None
-            if isinstance(jobs_to_add[i]["day_posted"], str) and len(jobs_to_add[i]["day_posted"])>0:
-                cur_job_day_posted = datetime.strptime(jobs_to_add[i]["day_posted"], "%m-%d-%Y").strftime("%b %d, %Y")
-            msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["links"]["url"] if jobs_to_add[i]["links"]["url"] else "") + (("\n\tSIMPLIFY:"+jobs_to_add[i]["links"]["simplify_url"]) if jobs_to_add[i]["links"]["simplify_url"] else "") + "\nDAY POSTED:" + (cur_job_day_posted if cur_job_day_posted else "Date not found"))
-        
-        msg = EmailMessage()
-
-        emailTime = datetime.now()
-        
-        msg['From'] = senderEmail
-        msg['To'] = gatewayAddress
-        msg['Subject'] = 'Job Update | ' + emailTime.strftime("%b %-d, %Y : At %-I:%M %p")
-        
-        msg.set_content(msg_content)
-        
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login(senderEmail, appKey)
-            smtp.send_message(msg)
-        
-        print("Email sent successfully!")
+        if num_jobs_to_add > 0:
+            # ONLY send out a email if we actually found new jobs.
+            msg_content = "Below is the NUM=[ " + str(num_jobs_to_add) + " ] jobs on the Github Job Board, in order from MOST RECENTLY POSTED (TOP OF THE EMAIL) on the Github Job Board TO LEAST RECENTLY POSTED (BOTTOM OF THE EMAIL).\nDAY POSTED refers to day posted on the Github Board in Dallas time, estimated by me.\n"
+            for i in range(num_jobs_to_add):
+                if i != 0:
+                    msg_content += "\n\n=========\n\n"
+    
+                cur_job_day_posted = None
+                if isinstance(jobs_to_add[i]["day_posted"], str) and len(jobs_to_add[i]["day_posted"])>0:
+                    cur_job_day_posted = datetime.strptime(jobs_to_add[i]["day_posted"], "%m-%d-%Y").strftime("%b %d, %Y")
+                msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["links"]["url"] if jobs_to_add[i]["links"]["url"] else "") + (("\n\tSIMPLIFY:"+jobs_to_add[i]["links"]["simplify_url"]) if jobs_to_add[i]["links"]["simplify_url"] else "") + "\nDAY POSTED:" + (cur_job_day_posted if cur_job_day_posted else "Date not found"))
+            
+            msg = EmailMessage()
+    
+            emailTime = datetime.now()
+            
+            msg['From'] = senderEmail
+            msg['To'] = gatewayAddress
+            msg['Subject'] = 'Job Update | ' + emailTime.strftime("%b %-d, %Y : At %-I:%M %p")
+            
+            msg.set_content(msg_content)
+            
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+                smtp.login(senderEmail, appKey)
+                smtp.send_message(msg)
+            
+            print("Email sent successfully!")
 
         # SECTION: OVERWRITE THE .json FILE IF WE FOUND NEW JOBS ON THIS RUN OF TEST.PY
         if len(jobs_to_add) == 0:
