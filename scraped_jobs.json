@@ -1,5 +1,35 @@
 [
   {
+    "company": "Klaviyo",
+    "role": "Software Engineer I",
+    "location": "Boston, MA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/klaviyocampus/jobs/7489745003?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/056b01e2-b52b-4c95-80f7-93447fe07353?utm_source=GHList"
+    },
+    "day_posted": "10-08-2025"
+  },
+  {
+    "company": "General Dynamics Mission Systems",
+    "role": "Software Engineer \u2013 Entry Level - Secret Clearance Required",
+    "location": "Dedham, MA",
+    "links": {
+      "url": "https://careers-gdms.icims.com/jobs/68432/job?mobile=true&needsRedirect=false&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/c7750d10-de6f-4f10-b1a5-edfc2c2341c3?utm_source=GHList"
+    },
+    "day_posted": "10-08-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Entry Level Software Engineer",
+    "location": "Pittsburgh, PA",
+    "links": {
+      "url": "https://careers-gdms.icims.com/jobs/68501/job?mobile=true&needsRedirect=false&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/1443d83a-f98f-4d1d-8538-cbd5d1a194e9?utm_source=GHList"
+    },
+    "day_posted": "10-08-2025"
+  },
+  {
     "company": "The Boeing Company",
     "role": "Entry Level Software Engineer-Systems",
     "location": "Oklahoma City, OK",
