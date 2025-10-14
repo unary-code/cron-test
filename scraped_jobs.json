@@ -1,5 +1,115 @@
 [
   {
+    "company": "\ud83d\udd25 IBM",
+    "role": "Software Developer \ud83d\udec2",
+    "location": "Lowell, MA\nSan Jose, CA\nAustin, TX",
+    "links": {
+      "url": "https://ibmglobal.avature.net/en_US/careers/JobDetail?jobId=58552&utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-14-2025"
+  },
+  {
+    "company": "Wyetech",
+    "role": "Software Engineer 0",
+    "location": "Annapolis Junction, MD",
+    "links": {
+      "url": "https://jobs.lever.co/wyetechllc/68850aff-cd40-44e9-9af0-8124ac21e930/apply?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/3d02295d-8294-4340-b125-2a6c7bf22136?utm_source=GHList"
+    },
+    "day_posted": "10-14-2025"
+  },
+  {
+    "company": "Aurora Innovation",
+    "role": "Software Engineer 1 - Remote Assist",
+    "location": "Mountain View, CA",
+    "links": {
+      "url": "https://aurora.tech/jobs/8191750002?gh_jid=8191750002&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/11a24614-aae6-401d-b591-ee36aef2bd4c?utm_source=GHList"
+    },
+    "day_posted": "10-14-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Software Engineer 1 - Remote Assist",
+    "location": "Pittsburgh, PA",
+    "links": {
+      "url": "https://aurora.tech/jobs/8209480002?gh_jid=8209480002&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/4111e6c0-b494-4c0a-a3bd-c2361bf7fb4a?utm_source=GHList"
+    },
+    "day_posted": "10-14-2025"
+  },
+  {
+    "company": "QuinStreet",
+    "role": "Entry-level Software Engineer",
+    "location": "Foster City, CA",
+    "links": {
+      "url": "https://www.quinstreet.com/careers/?gh_jid=7316288&utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-13-2025"
+  },
+  {
+    "company": "Caris",
+    "role": "Associate Software Engineer - Clinical Systems (Digital Path) \ud83d\udec2",
+    "location": "Irving, TX",
+    "links": {
+      "url": "https://carislifesciences.wd12.myworkdayjobs.com/en-US/cls/job/Irving-TX--75063/Associate-Software-Engineer---Clinical-Systems--Digital-Path-_JR104014?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-13-2025"
+  },
+  {
+    "company": "Insulet Corporation",
+    "role": "Associate Software QA Engineer",
+    "location": "Acton, MA",
+    "links": {
+      "url": "https://insulet.wd5.myworkdayjobs.com/en-US/insuletcareers/job/Acton-Massachusetts/Associate-Software-QA-Engineer--Hybrid---Acton--MA-_REQ-2025-13185?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-13-2025"
+  },
+  {
+    "company": "Hewlett Packard (HP)",
+    "role": "Software Development \ud83d\udec2",
+    "location": "5 locations",
+    "links": {
+      "url": "https://hp.wd5.myworkdayjobs.com/exteu-ac-careersite/job/Spring-Texas-United-States-of-America/Software-Development-Graduate_3152963?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-13-2025"
+  },
+  {
+    "company": "T-Rex Solutions",
+    "role": "Junior Software Developer",
+    "location": "District Heights, MD",
+    "links": {
+      "url": "https://www.trexsolutionsllc.com/current-opportunities-at-trex/?gh_jid=8208235002&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/ef598fdb-91d5-4ee8-82fd-8f88781dc7d7?utm_source=GHList"
+    },
+    "day_posted": "10-11-2025"
+  },
+  {
+    "company": "The Travelers Companies",
+    "role": "Software Engineer 1 - Python - Web Development",
+    "location": "Hartford, CT",
+    "links": {
+      "url": "https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Software-Engineer-I--Python--Web-Development--LLM-_R-47356?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/0c791cc9-5324-4c5f-a91f-cbd691cc5b48?utm_source=GHList"
+    },
+    "day_posted": "10-11-2025"
+  },
+  {
+    "company": "\ud83d\udd25 Amazon",
+    "role": "Security Engineer 1 - Corporate Services Security",
+    "location": "Arlington, VA",
+    "links": {
+      "url": "https://amazon.jobs/en/jobs/3099188/security-engineer-i-corporate-services-security?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/bb70924a-8fbe-4b64-aa12-ca63069abcb2?utm_source=GHList"
+    },
+    "day_posted": "10-11-2025"
+  },
+  {
     "company": "Arrow Electronics",
     "role": "Apprentice - Cloud Infrastructure",
     "location": "Bangalore, IN",
