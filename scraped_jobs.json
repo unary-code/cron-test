@@ -1,5 +1,45 @@
 [
   {
+    "company": "Sierra Nevada Coporation",
+    "role": "Systems Security Engineer I",
+    "location": "Lone Tree, CO",
+    "links": {
+      "url": "https://snc.wd1.myworkdayjobs.com/snc_external_career_site/job/Lone-Tree-CO/Systems-Security-Engineer-I_R0028693-1?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/4c40c38c-327e-4e50-b9d7-cbfb16910a7d?utm_source=GHList"
+    },
+    "day_posted": "10-17-2025"
+  },
+  {
+    "company": "\ud83d\udd25 NVIDIA",
+    "role": "Compiler Engineer \u2013 LLVM-New College Grad 2025",
+    "location": "Austin, TX\nRedmond, WA\nSanta Clara, CA",
+    "links": {
+      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Compiler-Engineer--LLVM--New-College-Grad-2025_JR2005960?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/f2bbd6fe-b223-437d-ab87-208146764b13?utm_source=GHList"
+    },
+    "day_posted": "10-17-2025"
+  },
+  {
+    "company": "Esri",
+    "role": "Software Engineer I - AI Assistant Framework - Arcgis Enterprise",
+    "location": "West Redlands, Redlands, CA",
+    "links": {
+      "url": "https://www.esri.com/careers/4932485007?gh_jid=4932485007&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/a2ffb74c-6eec-4c4c-83da-4869659da1f7?utm_source=GHList"
+    },
+    "day_posted": "10-17-2025"
+  },
+  {
+    "company": "RELX",
+    "role": "Software Engineer I - Student Placement months FTC",
+    "location": "Nottingham, UK",
+    "links": {
+      "url": "https://relx.wd3.myworkdayjobs.com/en-US/relx/job/Nottingham/Software-Engineer-I---Student-Placement-12-months-FTC_R101564-2?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/5791ff9b-5300-4df2-8676-42896017cee6?utm_source=GHList"
+    },
+    "day_posted": "10-17-2025"
+  },
+  {
     "company": "NewsBreak",
     "role": "Software Engineer \u2013 New Grad Friendly - IOS",
     "location": "Mountain View, CA",
