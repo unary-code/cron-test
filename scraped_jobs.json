@@ -1,5 +1,15 @@
 [
   {
+    "company": "\ud83d\udd25 Amazon",
+    "role": "Software Engineer I",
+    "location": "SF\nIrvine, CA",
+    "links": {
+      "url": "https://amazon.jobs/en/jobs/3111761/software-engineer-i?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/80b49a28-e1da-46aa-80f6-07fe5c497415?utm_source=GHList"
+    },
+    "day_posted": "10-17-2025"
+  },
+  {
     "company": "Microchip Technology",
     "role": "Engineer I - Software (FPGA Place and Route)",
     "location": "San Jose, CA",
