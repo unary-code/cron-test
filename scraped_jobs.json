@@ -1,5 +1,35 @@
 [
   {
+    "company": "Spot & Tango",
+    "role": "Jr. Software Engineer",
+    "location": "New York, NY",
+    "links": {
+      "url": "https://www.spotandtango.com/careers?gh_jid=4620638005&utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
+    "company": "Battelle",
+    "role": "Early Career Software Engineer \ud83c\uddfa\ud83c\uddf8",
+    "location": "Columbus, OH",
+    "links": {
+      "url": "https://jobs.battelle.org/us/en/job/BMIBMIUS75654EXTERNALENUS/Early-Career-Software-Engineer?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
+    "company": "Evolent",
+    "role": "Associate Software Engineer \ud83d\udec2",
+    "location": "Remote",
+    "links": {
+      "url": "https://evolent.wd1.myworkdayjobs.com/External/job/Work-at-Home/Associate-Software-Engineer_JR-914584?source=Linkedin&utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
     "company": "Northrop Grumman",
     "role": "Associate Software Engineer \ud83c\uddfa\ud83c\uddf8",
     "location": "Aurora, CO",
