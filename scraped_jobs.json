@@ -1,5 +1,115 @@
 [
   {
+    "company": "Battelle",
+    "role": "Early Career Software Engineer \ud83c\uddfa\ud83c\uddf8",
+    "location": "Columbus, OH",
+    "links": {
+      "url": "https://jobs.battelle.org/us/en/job/BMIBMIUS75654EXTERNALENUS/Early-Career-Software-Engineer?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
+    "company": "Evolent",
+    "role": "Associate Software Engineer \ud83d\udec2",
+    "location": "Remote",
+    "links": {
+      "url": "https://evolent.wd1.myworkdayjobs.com/External/job/Work-at-Home/Associate-Software-Engineer_JR-914584?source=Linkedin&utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
+    "company": "Northrop Grumman",
+    "role": "Associate Software Engineer \ud83c\uddfa\ud83c\uddf8",
+    "location": "Aurora, CO",
+    "links": {
+      "url": "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site/job/United-States-Colorado-Aurora/Associate-Software-Engineer_R10211419?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
+    "company": "Qualtrics",
+    "role": "Software Engineer I - Digital Experience",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://www.qualtrics.com/careers/us/en/job/7340628?gh_jid=7340628&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/42a4a32d-cb17-4adf-ab80-055c8824b4ee?utm_source=GHList"
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
+    "company": "Roserocket",
+    "role": "Junior Software Engineer \ud83d\udec2",
+    "location": "Toronto, ON",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Rose%20Rocket/c074b14e-ebe0-4a14-beb2-1419eca9d447/application?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-21-2025"
+  },
+  {
+    "company": "Nordstrom",
+    "role": "IOS Engineer 1 - Customer Mobile Applications Team - Hybrid - Seattle - WA",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://nordstrom.wd501.myworkdayjobs.com/nordstrom_careers/job/Seattle-WA/iOS-Engineer-1---Customer-Mobile-Applications-Team---HYBRID--Seattle--WA-_R-780389?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/be7235e4-5c0a-45ae-a665-084b88935bdd?utm_source=GHList"
+    },
+    "day_posted": "10-19-2025"
+  },
+  {
+    "company": "Sigma Computing",
+    "role": "Software Engineer \u2013 New Grad Program",
+    "location": "SF\nNYC",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/sigmacomputing/jobs/7501719003?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/3b14d946-f1a3-4591-8149-a54cb9fbd609?utm_source=GHList"
+    },
+    "day_posted": "10-18-2025"
+  },
+  {
+    "company": "Intuit",
+    "role": "Software Engineer 1",
+    "location": "Mountain View, CA",
+    "links": {
+      "url": "https://jobs.intuit.com/job/mountain-view/software-engineer-1/27595/87369448720?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/55a00559-28b9-41bc-b6dc-cda5714e2846?utm_source=GHList"
+    },
+    "day_posted": "10-18-2025"
+  },
+  {
+    "company": "TeleTracking",
+    "role": "Software Engineer I",
+    "location": "Pittsburgh, PA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/teletrackingtechnologiesinc/jobs/4937967008?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/fe22f0f9-715c-43ca-a6f6-0f2997928f32?utm_source=GHList"
+    },
+    "day_posted": "10-18-2025"
+  },
+  {
+    "company": "\ud83d\udd25 Amazon",
+    "role": "Software Engineer I",
+    "location": "SF\nIrvine, CA",
+    "links": {
+      "url": "https://amazon.jobs/en/jobs/3111761/software-engineer-i?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/80b49a28-e1da-46aa-80f6-07fe5c497415?utm_source=GHList"
+    },
+    "day_posted": "10-18-2025"
+  },
+  {
+    "company": "Microchip Technology",
+    "role": "Engineer I - Software (FPGA Place and Route)",
+    "location": "San Jose, CA",
+    "links": {
+      "url": "https://microchiphr.wd5.myworkdayjobs.com/en-US/external/job/CA---San-Jose---3850-N-First-St/Engineer-I---Software--FPGA-Place-and-Route-_R1914-25?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-18-2025"
+  },
+  {
     "company": "Spot & Tango",
     "role": "Jr. Software Engineer",
     "location": "New York, NY",
