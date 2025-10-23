@@ -1,5 +1,15 @@
 [
   {
+    "company": "\ud83d\udd25 Adobe",
+    "role": "Software Development Engineer",
+    "location": "San Jose, CA",
+    "links": {
+      "url": "https://careers.adobe.com/us/en/job/ADOBUSR158465EXTERNALENUS/Software-Development-Engineer?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-23-2025"
+  },
+  {
     "company": "ElevenLabs",
     "role": "Growth Engineering - Mobile \ud83d\udec2",
     "location": "Remote Globally",
