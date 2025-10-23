@@ -1,5 +1,35 @@
 [
   {
+    "company": "SharkNinja",
+    "role": "Software Development Testing Engineer I",
+    "location": "Needham, MA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/sharkninjaoperatingllc/jobs/4608642006?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-23-2025"
+  },
+  {
+    "company": "PricewaterhouseCoopers (PwC)",
+    "role": "Cloud Security Experienced Associate \ud83d\udec2",
+    "location": "18 locations",
+    "links": {
+      "url": "https://pwc.wd3.myworkdayjobs.com/en-US/us_experienced_careers/job/GA-Atlanta/Cloud-Security-Experienced-Associate_671668WD-1?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-23-2025"
+  },
+  {
+    "company": "Logitech",
+    "role": "Junior Software QA Engineer",
+    "location": "San Jose, CA",
+    "links": {
+      "url": "https://logitech.wd5.myworkdayjobs.com/en-US/logitech/job/San-Jose-California---USA/Junior-Software-QA-Engineer_144324?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-23-2025"
+  },
+  {
     "company": "Analog Devices",
     "role": "Associate Engineer, Embedded Software",
     "location": "Edinburgh, SC, UK",
