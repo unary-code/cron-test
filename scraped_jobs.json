@@ -1,5 +1,35 @@
 [
   {
+    "company": "ExtraHop",
+    "role": "Software Engineer I",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/extrahopnetworks/jobs/5649570004?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-30-2025"
+  },
+  {
+    "company": "Rover",
+    "role": "Software Engineer I, Expansions",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://jobs.lever.co/rover/206facd5-3dec-45a0-a76a-189cb2397d3e/?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-30-2025"
+  },
+  {
+    "company": "Sierra Nevada Coporation",
+    "role": "Software Engineer I \ud83c\uddfa\ud83c\uddf8",
+    "location": "Sparks, NV",
+    "links": {
+      "url": "https://snc.wd1.myworkdayjobs.com/en-US/SNC_External_Career_Site/job/Sparks-NV/Software-Engineer-I_R0028801-1?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-30-2025"
+  },
+  {
     "company": "Qualtrics",
     "role": "Software Engineer I - Customer Experience",
     "location": "Seattle, WA",
