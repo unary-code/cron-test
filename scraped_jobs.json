@@ -1,5 +1,115 @@
 [
   {
+    "company": "\ud83d\udd25 Amazon",
+    "role": "Silicon & AI Systems Innovation",
+    "location": "Austin, TX\nSeattle, WA\nCupertino, CA",
+    "links": {
+      "url": "https://www.amazon.jobs/en/jobs/3116902/2026-annapurna-labs-at-aws-early-career-us-silicon-ai-systems-innovation?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-30-2025"
+  },
+  {
+    "company": "ExtraHop",
+    "role": "Software Engineer I",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/extrahopnetworks/jobs/5649570004?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-30-2025"
+  },
+  {
+    "company": "Rover",
+    "role": "Software Engineer I, Expansions",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://jobs.lever.co/rover/206facd5-3dec-45a0-a76a-189cb2397d3e/?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-30-2025"
+  },
+  {
+    "company": "Sierra Nevada Coporation",
+    "role": "Software Engineer I \ud83c\uddfa\ud83c\uddf8",
+    "location": "Sparks, NV",
+    "links": {
+      "url": "https://snc.wd1.myworkdayjobs.com/en-US/SNC_External_Career_Site/job/Sparks-NV/Software-Engineer-I_R0028801-1?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-30-2025"
+  },
+  {
+    "company": "Qualtrics",
+    "role": "Software Engineer I - Customer Experience",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://www.qualtrics.com/careers/us/en/job/7347811?gh_jid=7347811&utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-29-2025"
+  },
+  {
+    "company": "General Dynamics Mission Systems",
+    "role": "Junior Software Engineer -",
+    "location": "Dedham, MA",
+    "links": {
+      "url": "https://careers-gdms.icims.com/jobs/68513/job?mobile=true&needsRedirect=false&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/2c40466c-9807-4564-b790-fc5981e2c872?utm_source=GHList"
+    },
+    "day_posted": "10-27-2025"
+  },
+  {
+    "company": "Promise",
+    "role": "Software Engineer \u2013 New Grad - Forward Deployed AI",
+    "location": "Oakland, CA",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Promise/f0a30718-faf0-4a34-8759-0d6335fa365a/application?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/f490ebdd-aaae-4bdf-af52-b3974fbf71b1?utm_source=GHList"
+    },
+    "day_posted": "10-26-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Software Engineer \u2013 New Grad - Forward Deployed AI",
+    "location": "Washington, DC",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Promise/f1bdeaba-567d-4d57-97b6-2d78719c0443/application?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/d0b13129-f026-459d-9e71-7a7881d8701e?utm_source=GHList"
+    },
+    "day_posted": "10-26-2025"
+  },
+  {
+    "company": "Fidelity National Information Services",
+    "role": "Software Engineer I - C++ and Payments Systems",
+    "location": "Philadelphia, PA",
+    "links": {
+      "url": "https://fis.wd5.myworkdayjobs.com/searchjobs/job/PHL-MAKA-8767-FLR42/Software-Engineer-I--C---and-Payments-Systems-_JR0300399?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/cbbdcd6c-5c6c-48b8-827e-301428151c58?utm_source=GHList"
+    },
+    "day_posted": "10-25-2025"
+  },
+  {
+    "company": "Promise",
+    "role": "Software Engineer \u2013 Forward Deployed AI (New Grad) \ud83c\uddfa\ud83c\uddf8",
+    "location": "Oakland, CA",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Promise/f0a30718-faf0-4a34-8759-0d6335fa365a?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-25-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Software Engineer \u2013 Forward Deployed AI (New Grad) \ud83c\uddfa\ud83c\uddf8",
+    "location": "Washington, D.C.",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Promise/f1bdeaba-567d-4d57-97b6-2d78719c0443?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "10-25-2025"
+  },
+  {
     "company": "Annapurna Labs",
     "role": "Silicon & AI Systems Innovation",
     "location": "Austin, TX\nSeattle, WA\nCupertino, CA",
