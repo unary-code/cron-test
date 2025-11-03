@@ -1,5 +1,25 @@
 [
   {
+    "company": "Red Hat",
+    "role": "Associate Software Engineer",
+    "location": "Remote in USA",
+    "links": {
+      "url": "https://redhat.wd5.myworkdayjobs.com/en-US/jobs/job/Remote-US-NC/Associate-Software-Engineer_R-052052?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-03-2025"
+  },
+  {
+    "company": "Citizen Health",
+    "role": "Early Career Software Engineer",
+    "location": "San Francisco, CA\nSan Mateo, CA",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Citizen%20Health/0f4048fa-da35-4112-9166-123440a2cb57?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-03-2025"
+  },
+  {
     "company": "General Dynamics Mission Systems",
     "role": "SDA Software Engineer \u2013 Entry Level",
     "location": "Scottsdale, AZ",
