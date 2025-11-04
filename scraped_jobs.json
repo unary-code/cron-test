@@ -1,5 +1,35 @@
 [
   {
+    "company": "Intuit",
+    "role": "Software Engineer 1",
+    "location": "Mountain View, CA",
+    "links": {
+      "url": "https://jobs.intuit.com/job/mountain-view/software-engineer-1/27595/88025996928?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/f15f9ecd-dae5-45ab-b82f-1352a8b50521?utm_source=GHList"
+    },
+    "day_posted": "11-04-2025"
+  },
+  {
+    "company": "Citizen Health",
+    "role": "Early Career Software Engineer",
+    "location": "SF\nSan Mateo, CA",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Citizen%20Health/0db9efc6-cdc3-44c6-a93a-59a57808e451/application?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/e7c6c957-8528-4696-97cc-8b1cf172a138?utm_source=GHList"
+    },
+    "day_posted": "11-04-2025"
+  },
+  {
+    "company": "Truveta",
+    "role": "Software Engineer \u2013 Entry Level - Imaging Services",
+    "location": "Seattle, WA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/truveta/jobs/5696523004?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/58aa995f-5b36-476b-8bd9-07ad92d7ff13?utm_source=GHList"
+    },
+    "day_posted": "11-04-2025"
+  },
+  {
     "company": "RTX",
     "role": "2026 Full-time - Cyber Security Engineer I - Onsite - MA",
     "location": "Tewksbury, MA",
