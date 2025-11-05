@@ -1,5 +1,65 @@
 [
   {
+    "company": "\ud83d\udd25 Visa",
+    "role": "Graduate Software Engineer",
+    "location": "Reading, United Kingdom",
+    "links": {
+      "url": "https://jobs.smartrecruiters.com/Visa/615efbc7-5ef9-4dc3-b65a-cf364e55674e?dcr_ci=Visa&utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-05-2025"
+  },
+  {
+    "company": "Warp",
+    "role": "Software Engineer",
+    "location": "Remote in USA\nRemote in Canada",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/warp/jobs/4324888004?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-05-2025"
+  },
+  {
+    "company": "General Dynamics Mission Systems",
+    "role": "Software Engineer \u2013 Entry Level \ud83c\uddfa\ud83c\uddf8",
+    "location": "Scottsdale, AZ",
+    "links": {
+      "url": "https://careers-gdms.icims.com/jobs/68913/software-engineer-%E2%80%93-entry-level/job?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-05-2025"
+  },
+  {
+    "company": "Genuine Parts Company",
+    "role": "Cloud Engineer I",
+    "location": "Birmingham, AL",
+    "links": {
+      "url": "https://genpt.wd1.myworkdayjobs.com/en-US/careers/job/Birmingham-AL-USA/Cloud-Engineer-I_R25_0000038435?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-05-2025"
+  },
+  {
+    "company": "EBSCO",
+    "role": "Cloud Platform Engineer I",
+    "location": "Ipswich, MA",
+    "links": {
+      "url": "https://careers-ebscoind.icims.com/jobs/1873/cloud-platform-engineer-i/job?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-05-2025"
+  },
+  {
+    "company": "CACI",
+    "role": "Junior Software Engineer \ud83c\uddfa\ud83c\uddf8",
+    "location": "Annapolis Junction, MD",
+    "links": {
+      "url": "https://caci.wd1.myworkdayjobs.com/en-US/External/job/US-MD-Annapolis-Junction/Junior-Software-Engineer_319292-1?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-05-2025"
+  },
+  {
     "company": "TD Bank",
     "role": "Software Engineer I -",
     "location": "Toronto, ON, Canada",
