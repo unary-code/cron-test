@@ -1,5 +1,15 @@
 [
   {
+    "company": "McDonald's",
+    "role": "Full Stack Engineer 1",
+    "location": "Chicago, IL",
+    "links": {
+      "url": "https://jobs.mcdonalds.com/job/Chicago-Full-Stack-Engineer-I-IAM-IL-60607/1341509500/?ats=successfactors&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/b05a4f89-0ec5-4c84-bc93-529f64173985?utm_source=GHList"
+    },
+    "day_posted": "11-10-2025"
+  },
+  {
     "company": "KBR",
     "role": "Software Engineer I",
     "location": "Colorado Springs, CO",
