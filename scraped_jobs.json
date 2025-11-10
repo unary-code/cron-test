@@ -1,5 +1,35 @@
 [
   {
+    "company": "\ud83d\udd25 ServiceNow",
+    "role": "Frontend Software Engineer \ud83d\udec2",
+    "location": "San Diego, CA",
+    "links": {
+      "url": "https://jobs.smartrecruiters.com/ServiceNow/744000092424475?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-10-2025"
+  },
+  {
+    "company": "\ud83d\udd25 TikTok",
+    "role": "Software Engineer Graduate (Data Arch - Data Ecosystem)",
+    "location": "San Jose, CA",
+    "links": {
+      "url": "https://lifeattiktok.com/search/7535220808265681159?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-10-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Software Engineer Graduate (Data Platfrom TikTok BP)",
+    "location": "San Jose, CA",
+    "links": {
+      "url": "https://lifeattiktok.com/search/7535528357414570248?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-10-2025"
+  },
+  {
     "company": "McDonald's",
     "role": "Full Stack Engineer 1",
     "location": "Chicago, IL",
