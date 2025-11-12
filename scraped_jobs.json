@@ -1,5 +1,45 @@
 [
   {
+    "company": "Benchling",
+    "role": "Software Engineer New Grad",
+    "location": "SF",
+    "links": {
+      "url": "https://boards.greenhouse.io/benchling/jobs/7386982?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/b9f3073a-1684-4ecd-963f-cb1ef2488200?utm_source=GHList"
+    },
+    "day_posted": "11-12-2025"
+  },
+  {
+    "company": "Chewy",
+    "role": "Software Engineer 1",
+    "location": "Boston, MA",
+    "links": {
+      "url": "https://boards.greenhouse.io/embed/job_app?token=7360915&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/68bc0f26-f295-4b4a-bd4a-ed3c65497206?utm_source=GHList"
+    },
+    "day_posted": "11-12-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Software Engineer 1",
+    "location": "Boston, MA",
+    "links": {
+      "url": "https://boards.greenhouse.io/embed/job_app?token=7365960&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/8df883ab-c282-4fa8-b05a-560395728c1f?utm_source=GHList"
+    },
+    "day_posted": "11-12-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Software Engineer 1",
+    "location": "Bellevue, WA",
+    "links": {
+      "url": "https://boards.greenhouse.io/embed/job_app?token=7366016&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/b4268fa0-6f32-4ec1-be14-c593261cb39f?utm_source=GHList"
+    },
+    "day_posted": "11-12-2025"
+  },
+  {
     "company": "General Dynamics Mission Systems",
     "role": "Software Engineer - Entry Level-Java / C++ - Start Date",
     "location": "Manassas, VA",
