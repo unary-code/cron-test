@@ -1,5 +1,25 @@
 [
   {
+    "company": "Maybern",
+    "role": "Software Engineer, New Grad",
+    "location": "New York, NY",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/maybern/90f7a0d4-4e6c-43e0-a444-06301faa4058?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-13-2025"
+  },
+  {
+    "company": "Rockwell Automation",
+    "role": "Associate Engineer Embedded Software",
+    "location": "Mayfield Heights, OH",
+    "links": {
+      "url": "https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation/job/Mayfield-Heights-Ohio-United-States/Associate-Engineer-Embedded-Software_R25-8467?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-13-2025"
+  },
+  {
     "company": "Truist Bank",
     "role": "Software Engineer 1",
     "location": "Charlotte, NC",
