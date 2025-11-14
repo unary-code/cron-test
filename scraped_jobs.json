@@ -1,5 +1,75 @@
 [
   {
+    "company": "Comcast",
+    "role": "Junior Full Stack Engineer - Python/React/AWS",
+    "location": "Philadelphia, PA",
+    "links": {
+      "url": "https://comcast.wd5.myworkdayjobs.com/Comcast_Careers/job/PA---Philadelphia-1800-Arch-St/Junior-Full-Stack-Engineer_R423945?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/edb7556c-e880-4d8e-a4bc-c56a59de5a9e?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "GM financial",
+    "role": "Software Development Engineer 1",
+    "location": "4 locations",
+    "links": {
+      "url": "https://fa-exvu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1309?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/f7e33744-207d-4a9c-8b55-58e988d522fc?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "Truist Bank",
+    "role": "Software Engineer 1",
+    "location": "Raleigh, NC\nCharlotte, NC\nAtlanta, GA",
+    "links": {
+      "url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Charlotte-NC/Software-Engineer-I_R0108256?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/64dd4cfd-b61e-497b-97cd-f934eceaaa7f?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "Citizen Health",
+    "role": "Early Career Software Engineer",
+    "location": "SF",
+    "links": {
+      "url": "https://jobs.ashbyhq.com/Citizen%20Health/a1f2084a-61bf-4ad0-af47-13de3cac7d36/application?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/e5d70d02-dd40-4ea2-80aa-239ab5c143c1?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "\ud83d\udd25 DoorDash",
+    "role": "Software Engineer - Entry Level",
+    "location": "Toronto, ON, Canada",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/doordashcanada/jobs/7392991?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/34a2227f-b88a-4459-86f3-799abbf995cf?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "Fanatics",
+    "role": "Software Engineer 1",
+    "location": "Remote in UK",
+    "links": {
+      "url": "https://fa-exki-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/25522?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/d8243664-058d-4c5e-b96f-3be891eb8dad?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "mthree",
+    "role": "Entry Level Full-Stack Developer",
+    "location": "Montreal, QC, Canada",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/mthreerecruitingportal/jobs/4613045006?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/23cb0aa4-4617-4868-aa0f-03d66945fe2e?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
     "company": "American Express",
     "role": "Software Engineer 1",
     "location": "Phoenix, AZ",
