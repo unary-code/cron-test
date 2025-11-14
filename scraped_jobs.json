@@ -1,5 +1,15 @@
 [
   {
+    "company": "Intuit",
+    "role": "Software Engineer 1",
+    "location": "Mountain View, CA",
+    "links": {
+      "url": "https://jobs.intuit.com/job/mountain-view/full-stack-swe1/27595/88401821136?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/7ef53a89-b116-47f8-9ac1-70aaf729f6f4?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
     "company": "Comcast",
     "role": "Junior Full Stack Engineer - Python/React/AWS",
     "location": "Philadelphia, PA",
