@@ -1,5 +1,35 @@
 [
   {
+    "company": "Typeface",
+    "role": "Software Engineer 1",
+    "location": "Palo Alto, CA\nBellevue, WA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/typeface/jobs/4982116007?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/3442fed0-2ebf-495f-abc6-49697ba2d747?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "mthree",
+    "role": "Entry Level - C Software Developer",
+    "location": "Tampa, FL",
+    "links": {
+      "url": "https://mthree.com/careers/job/?gh_jid=4602522006&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/57aa268f-963d-466a-85ed-07ae7f93836a?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Entry Level - C Software Developer",
+    "location": "Tampa, FL",
+    "links": {
+      "url": "https://mthree.com/careers/job/?gh_jid=4602566006&utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/36088c2e-ee16-478c-a78d-4398f81d70ba?utm_source=GHList"
+    },
+    "day_posted": "11-14-2025"
+  },
+  {
     "company": "METECS",
     "role": "Junior Software Engineer - DST \ud83c\uddfa\ud83c\uddf8",
     "location": "Houston, TX",
