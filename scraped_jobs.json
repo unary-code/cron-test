@@ -1,5 +1,15 @@
 [
   {
+    "company": "BAE Systems",
+    "role": "Entry Level Software Engineer \ud83c\uddfa\ud83c\uddf8",
+    "location": "Totowa, NJ",
+    "links": {
+      "url": "https://jobs.baesystems.com/global/en/job/BAE1US118690BREXTERNAL/Entry-Level-Software-Engineer?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-25-2025"
+  },
+  {
     "company": "Nutanix",
     "role": "Software Engineer 1 - Python - Linux",
     "location": "Durham, NC",
