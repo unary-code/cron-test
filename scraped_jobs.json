@@ -1,5 +1,25 @@
 [
   {
+    "company": "Intuit",
+    "role": "Software Engineer 1",
+    "location": "Mountain View, CA",
+    "links": {
+      "url": "https://jobs.intuit.com/job/mountain-view/software-engineer-1/27595/88843312032?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/1617b84b-5153-43c3-a841-e2d8390de1dc?utm_source=GHList"
+    },
+    "day_posted": "11-26-2025"
+  },
+  {
+    "company": "True Anomaly",
+    "role": "Front End Software Engineer 1",
+    "location": "Long Beach, CA\nColorado Springs, CO\nDenver, CO",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/trueanomalyinc/jobs/4992058007?utm_source=Simplify&ref=Simplify",
+      "simplify_url": "https://simplify.jobs/p/10e143cf-443b-4ec0-b99d-2a6a5836d626?utm_source=GHList"
+    },
+    "day_posted": "11-26-2025"
+  },
+  {
     "company": "United Parcel Service (UPS)",
     "role": "Software Development Engineer 1 - Salesforce",
     "location": "Georgia\nParsippany-Troy Hills, NJ",
