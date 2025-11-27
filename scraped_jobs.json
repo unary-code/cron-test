@@ -1,5 +1,35 @@
 [
   {
+    "company": "Blueprint Technologies",
+    "role": "Software Engineer 1",
+    "location": "Bellevue, WA",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/bpcs/jobs/7271702?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-27-2025"
+  },
+  {
+    "company": "CLEAR",
+    "role": "Software Engineer, New Grad, Backend",
+    "location": "New York, NY",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/clear/jobs/7403318?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-27-2025"
+  },
+  {
+    "company": "\u21b3",
+    "role": "Software Engineer, New Grad, Fullstack",
+    "location": "New York, NY",
+    "links": {
+      "url": "https://job-boards.greenhouse.io/clear/jobs/7430247?utm_source=Simplify&ref=Simplify",
+      "simplify_url": null
+    },
+    "day_posted": "11-27-2025"
+  },
+  {
     "company": "Citizen Health",
     "role": "Early Career Software Engineer",
     "location": "SF",
