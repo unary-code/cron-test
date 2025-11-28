@@ -1,0 +1,2 @@
+#schedule:
+#    - cron: '1,31 7-23 * * *' # Twice per hour
