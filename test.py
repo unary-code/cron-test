@@ -5,15 +5,24 @@ import pytz
 import smtplib
 from email.message import EmailMessage
 import json
-import os
+import os, re
+from dotenv import load_dotenv
+from datetime import datetime, timedelta
 
 # GET ALL THE ENVIRONMENTAL VARS.
-URL = os.environ.get("BASE_URL")
+#URL = os.environ.get("BASE_URL")
+#print(f"{URL=}")
+# URL = "dice.com"
+# URL = "https://www.dice.com/jobs?filters.workplaceTypes=Remote&q=Senior+IT+Project+Manager"
+LABELS_AND_URLS = [("Dice", "https://www.dice.com/jobs?filters.postedDate=ONE&filters.workplaceTypes=Remote&q=Senior+IT+Project+Manager")]
 
-senderEmail = os.environ.get("EMAIL")
+print(f"{LABELS_AND_URLS=}")
+
+load_dotenv()
+# senderEmail = os.environ.get("EMAIL")
+senderEmail = os.getenv("EMAIL")
 gatewayAddress = senderEmail
-appKey = os.environ.get("WORD")
-
+appKey = os.getenv("WORD")
 dallas_tz = pytz.timezone("America/Chicago")
 
 curTime = datetime.now(dallas_tz)
@@ -49,17 +58,30 @@ if len(past_jobs) > MAX_ALLOWED_JOBS_IN_FILE:
     past_jobs = past_jobs[0:MAX_ALLOWED_JOBS_IN_FILE]
 
 async def main():
+    print("RUN main")
+    for (label, url) in LABELS_AND_URLS:
+        print(f"PROCESSING website: {label} which is at {url=}")
+        await process_website(label, url)
+
+async def process_website(label, url):
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         page = await browser.new_page()
-        await page.goto(URL)
+        await page.goto(url)
         
-        await page.goto(URL, wait_until="networkidle")
-        await page.wait_for_selector("markdown-accessiblity-table > table > tbody > tr")
+        await page.goto(url, wait_until="networkidle")
+        #await page.wait_for_selector("markdown-accessiblity-table > table > tbody > tr")
+        await page.wait_for_selector('div[aria-label="Job search results"] > div[role="listitem"]')
         
+        # div[Job search results"] > div[listitem] > X > div.self-stretch > a[data-testid="job-search-job-detail-link"] .innerHTML (is the Job Title) & .href
+        #
+        # Let jobCardDivs = (div[Job search results"] > div[listitem] .child[0].child[0].child[0]
+        #   or equivalently div[Job search results"] > div[data-testid="job-card" role="article"])
+        # jobCardDivs > div > div(1st div child) > div(1st div child) > span (1st span child of the <div>) > a (2nd <a> child of <span>  or equivalently, 1st <a> child of <span> that does not have a aria-label="Company Logo") > p .innerHTML (is the Company Name)
+        # div.self-stretch > a[data-testid="job-search-job-detail-link"] 
         print("AFTER waiting for markdown-accessiblity-table > table > tbody > tr to appear / be loaded on the page")
 
-        tableRows = page.locator("markdown-accessiblity-table > table > tbody > tr")
+        tableRows = page.locator('div[aria-label="Job search results"] > div[role="listitem"]')
         tableRows_num = await tableRows.count()
         print("NUMBER OF ...posting-date tableRows=", tableRows_num)
         tableRows = await tableRows.all()
@@ -71,6 +93,9 @@ async def main():
         # print("CURRENT DAY=", currentDay)
 
         jobs_to_add = []
+
+        with open("job_duplicates.log", "w", encoding="utf-8") as f:
+            f.write("NEW LOG\n")
         
         for currentTableRow in tableRows:
             print("START OF THE " + str(numRowsChecked+1) + "TH ITERATION")
@@ -78,6 +103,63 @@ async def main():
                 print("STOPPED SEARCHING FOR JOBS ON THE WEBSITE, BECAUSE I SCRAPED THE LIMIT OF=", numRowsChecked, "JOBS PER RUN OF ME (test.py)")
                 break
             print("\n\ncurrentTableRow=", currentTableRow)
+            # NEW CODE ON MAY 2, 2026:
+            # currentTableRow.locator("")
+            company_name_selector = ('div > div > div > div > div > span > a:not([aria-label="Company Logo"]) > p')
+            # .text_content() is preferred over .inner_html()
+            company_name = await currentTableRow.locator(company_name_selector).text_content()
+            print(f"\n\n\nATTENTION")
+
+            main_info_selector = ('div > div > div > div > div[role="main"] > div > div > a')
+            main_info_element = currentTableRow.locator(main_info_selector)
+            job_title = await main_info_element.text_content()
+            job_link = await main_info_element.get_attribute("href")
+
+            job_type_and_date_ele = currentTableRow.locator('div > div > div > div > div[role="main"] > span:first-of-type > div')
+            children = job_type_and_date_ele.locator("div:nth-of-type(1) > div > *")
+            count = await children.count()
+            for i in range(count):
+                child = children.nth(i)
+                print(await child.evaluate("el => el.outerHTML"))
+            #return
+            job_type = await job_type_and_date_ele.locator('div:nth-of-type(1) > div > p').text_content()
+            job_date = await job_type_and_date_ele.locator('div:nth-of-type(2) > div:nth-of-type(2) > p').text_content()
+            date_posted = None
+                    
+            if job_date.lower() == "today":
+                date_posted = (datetime.today()).strftime("%B %d, %Y")
+            elif job_date.lower() == "yesterday":
+                date_posted = (datetime.today() - timedelta(days=1)).strftime("%B %d, %Y")
+            elif bool(re.fullmatch(r".+\*d ago.*", job_date)):
+                # "2d ago" or "30+d" ago
+                num_days_ago = None
+                more_than = False
+                for date_part_ind, date_part in enumerate(job_date.split(" ")):
+                    if date_part[-2:] == "+d":
+                        num_days_ago = int(date_part[:-2])
+                        more_than = True
+                    if date_part[-1] == "d":
+                        num_days_ago = int(date_part[:-1])
+                date_posted = (datetime.today() - timedelta(days=num_days_ago)).strftime("%B %d, %Y")
+                if more_than:
+                    date_posted = "<= " + date_posted
+            else:
+                # Do not know the exact type so
+                date_posted = "{'day_scraped':"+(datetime.today()).strftime("%B %d, %Y") + ",'text_shown_on_that_day':"+job_date+"}"
+            print(f"{company_name=} {job_title=} {job_type=} {job_date=} {job_link=}")
+            job_to_add = {"company": company_name, "role": job_title, "location": job_type, "link": job_link, "day_posted": date_posted}
+            already_exists = any(past_job.get("company") == job_to_add.get("company") and past_job.get("role") == job_to_add.get("role") and past_job.get("location") == job_to_add.get("location") for past_job in past_jobs)
+            if already_exists:
+                with open("job_duplicates.log", "a", encoding="utf-8") as f:
+                    f.write(f"ON {datetime.today().strftime('%B %d, %Y')} , FOUND A DUPLICATE JOB {job_to_add=} THAT ALREADY EXISTED IN scraped_jobs.json\n")
+                print("JOB ALREADY EXISTS IN scraped_jobs.json FILE")
+                continue
+
+            # Add the just-scraped-from-website job to the json file.
+            jobs_to_add.append({"company": company_name, "role": job_title, "location": job_type, "link": job_link, "day_posted": date_posted})
+
+            numRowsChecked += 1
+            continue
             currentTableRowHTML = await currentTableRow.evaluate("element => element.innerHTML")
             print(currentTableRowHTML)
 
@@ -143,22 +225,24 @@ async def main():
         # SECTION: Send 1 email per run of test.py.
         
         num_jobs_to_add = len(jobs_to_add)
+        print(f"{num_jobs_to_add=}")
         if num_jobs_to_add > 0:
             # ONLY send out a email if we actually found new jobs.
             msg_content = "Below is the NUM=[ " + str(num_jobs_to_add) + " ] jobs on the Github Job Board, in order from MOST RECENTLY POSTED (TOP OF THE EMAIL) on the Github Job Board TO LEAST RECENTLY POSTED (BOTTOM OF THE EMAIL).\nDAY POSTED refers to day posted on the Github Board in Dallas time, estimated by me.\n"
+            print(f"{msg_content=}")
             for i in range(num_jobs_to_add):
                 if i != 0:
                     msg_content += "\n\n=========\n\n"
     
-                cur_job_day_posted = None
-                if isinstance(jobs_to_add[i]["day_posted"], str) and len(jobs_to_add[i]["day_posted"])>0:
-                    cur_job_day_posted = datetime.strptime(jobs_to_add[i]["day_posted"], "%m-%d-%Y").strftime("%b %d, %Y")
-                msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["links"]["url"] if jobs_to_add[i]["links"]["url"] else "") + (("\n\tSIMPLIFY:"+jobs_to_add[i]["links"]["simplify_url"]) if jobs_to_add[i]["links"]["simplify_url"] else "") + "\nDAY POSTED:" + (cur_job_day_posted if cur_job_day_posted else "Date not found"))
+                #cur_job_day_posted = None
+                # if isinstance(jobs_to_add[i]["day_posted"], str) and len(jobs_to_add[i]["day_posted"])>0:
+                #     cur_job_day_posted = datetime.strptime(jobs_to_add[i]["day_posted"], "%m-%d-%Y").strftime("%b %d, %Y")
+                msg_content += (str(i+1) + ":\nCOMPANY: " + jobs_to_add[i]["company"] + "\nROLE TITLE:" + jobs_to_add[i]["role"] + "\nLOCATION:" + jobs_to_add[i]["location"] + "\nAPPLY:" + ("\n\tURL:"+jobs_to_add[i]["link"] if jobs_to_add[i]["link"] else "No URL found.") + "\nDAY POSTED:" + (jobs_to_add[i]["day_posted"] if jobs_to_add[i]["day_posted"] else "Date not found"))
             
             msg = EmailMessage()
     
             emailTime = datetime.now(dallas_tz)
-            
+
             msg['From'] = senderEmail
             msg['To'] = gatewayAddress
             msg['Subject'] = 'Job Update | ' + emailTime.strftime("%b %-d, %Y : At %-I:%M %p")
@@ -175,10 +259,10 @@ async def main():
         if len(jobs_to_add) == 0:
             # Do NOT need to over-write the .json file
             # If the .json file initially had more jobs than allowed, then I need to write to the .json file
-            if initial_num_past_jobs > MAX_ALLOWED_JOBS_IN_FILE:
-                # Note that we already truncated "past_jobs"
-                with open(STATE_FILE, "w") as f:
-                    json.dump(past_jobs, f, indent=2)
+            # if initial_num_past_jobs > MAX_ALLOWED_JOBS_IN_FILE:
+            #     # Note that we already truncated "past_jobs"
+            #     with open(STATE_FILE, "w") as f:
+            #         json.dump(past_jobs, f, indent=2)
             pass
         else:
             jobs_to_add = jobs_to_add + past_jobs
