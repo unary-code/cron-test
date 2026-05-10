@@ -19,10 +19,10 @@ LABELS_AND_URLS = [("Dice", "https://www.dice.com/jobs?filters.postedDate=ONE&fi
 print(f"{LABELS_AND_URLS=}")
 
 load_dotenv()
-# senderEmail = os.environ.get("EMAIL")
-senderEmail = os.getenv("EMAIL")
+# senderEmail = os.getenv("EMAIL")
+senderEmail = os.environ.get("EMAIL_1")
 gatewayAddress = senderEmail
-appKey = os.getenv("WORD")
+appKey = os.environ.get("WORD_1")
 dallas_tz = pytz.timezone("America/Chicago")
 
 curTime = datetime.now(dallas_tz)
