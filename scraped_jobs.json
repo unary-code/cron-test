@@ -1,5 +1,26 @@
 [
   {
+    "company": "Boeing Company",
+    "role": "Lead Information Technology Project Management Specialist",
+    "location": "Remote or Seattle, Washington",
+    "link": "https://www.dice.com/job-detail/0561b90f-78a8-4f14-9a82-5202279b0b76",
+    "day_posted": "May 17, 2026"
+  },
+  {
+    "company": "Gartner",
+    "role": "Senior Director, Analyst - Managed IT Security Services, Sourcing Focus",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/80109c26-41d3-4d53-bc25-efb9dce4c122",
+    "day_posted": "May 17, 2026"
+  },
+  {
+    "company": "University Of Utah",
+    "role": "IT Architect",
+    "location": "Remote or Salt Lake City, Utah",
+    "link": "https://www.dice.com/job-detail/211140b6-cd59-411d-9c3d-2baddbda2f97",
+    "day_posted": "May 17, 2026"
+  },
+  {
     "company": "Robert Half",
     "role": "IT Support",
     "location": "Remote or San Francisco, California",
