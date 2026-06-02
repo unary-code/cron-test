@@ -1,5 +1,82 @@
 [
   {
+    "company": "Integer",
+    "role": "Senior Manager, IT Service Management",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/4fe29c16-4ded-452c-be81-7d69fae08881",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "The Guthrie Clinic",
+    "role": "Sr Database Administrator - IT Infrastructure - Full Time (Remote)",
+    "location": "Remote or Sayre, Pennsylvania",
+    "link": "https://www.dice.com/job-detail/6eaf721c-e3d3-46d7-ba62-a57bfec8e528",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "The RJA Group, Inc.",
+    "role": "Senior Manager - IT Infrastructure & Operations",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/614fe06f-ac8c-4cb9-9679-a23fadff4243",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "Biogen Idec",
+    "role": "Senior Manager, IT Commercial Data Management",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/6cf4153e-3c41-4b63-9083-6350b4668a5a",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "Integer",
+    "role": "IT Project Manager",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/06668c18-4763-4444-95fd-2ac55d34ebbe",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "Sentinel Technologies",
+    "role": "IT Project Manager",
+    "location": "Remote or Downers Grove, Illinois",
+    "link": "https://www.dice.com/job-detail/29414fab-e317-4e0f-a18d-02e05d8e91da",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "Apetan Consulting",
+    "role": "Project Leader (IT Service Management Specialist)/Remote",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/938bf5c5-4d56-415d-b0fb-29b84fd467a6",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "Apetan Consulting",
+    "role": "IT Support Specialist/rEMOTE",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/17f33467-7eb1-4f5a-ba12-bd5e5a91a05b",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "Apetan Consulting",
+    "role": "IT Business Relationship Manager (BRM)/Remote",
+    "location": "Remote",
+    "link": "https://www.dice.com/job-detail/95653d97-f216-4751-8f6b-22c793b0a8b6",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "The Guthrie Clinic",
+    "role": "Engineer, IT Auto & Monitoring - IT Infrastructure - Full Time (Remote)",
+    "location": "Remote or Sayre, Pennsylvania",
+    "link": "https://www.dice.com/job-detail/b60b6fe2-ec35-4834-b3c9-f8133fa8bb26",
+    "day_posted": "June 02, 2026"
+  },
+  {
+    "company": "MVP Consulting Plus",
+    "role": "IT Specialist",
+    "location": "Remote or Albany, New York",
+    "link": "https://www.dice.com/job-detail/f548a834-971a-4406-97a4-45dc79ec713a",
+    "day_posted": "June 02, 2026"
+  },
+  {
     "company": "ARK Infotech Spectrum",
     "role": "IT Project Manager with Trackwise",
     "location": "Remote",
